@@ -49,17 +49,24 @@
         <?php 
             $stackData = array(
                 [
-                    'title' => 'PHP',
+                    'title' => 'PHP, PHP codeIgniter',
                     'text' => [
                         'PHP codeIgniter 프레임워크를 사용하여 개발할 수 있습니다.',
                         'MVC 패턴, 객체지향, 함수형 프로그래밍을 이해하고 있습니다.',
                     ]
                 ],
                 [
-                    'title' => 'HTML, javaScript, CSS',
+                    'title' => 'mariaDB',
+                    'text' => [
+                        'RDB 특성을 이해하고 원하는 관계 데이터를 조회할 수 있습니다.',
+                        'CRUD 기능을 이해하고 작업할 수 있습니다.',
+                        '서비스에 필요한 테이블 구조를 설계할 수 있습니다.',
+                    ]
+                ],
+                [
+                    'title' => 'HTML, javaScript, CSS, jQuery',
                     'text' => [
                         '자바스크립트로 객체지향의 구조 작업을 할 수 있습니다.',
-                        'Vue.js를 사용하여 신규 프로젝트를 진행한 경험이 있습니다.',
                         '기본적인 마크업과 스타일 사용에 능숙합니다.',
                     ]
                 ],
@@ -81,13 +88,6 @@
                     'text' => [
                         'Git을 활용한 형상관리, 협업 경험이 있습니다.',
                         'GitHub, bitbucket를 사용하여 프로젝트 관리 경험이 있습니다.',
-                    ]
-                ],
-                [
-                    'title' => 'AWS',
-                    'text' => [
-                        'S3로 리소스를 관리한 경험이 있습니다.',
-                        'Lambda Mediaconvert 사용 경험이 있습니다.',
                     ]
                 ],
                 

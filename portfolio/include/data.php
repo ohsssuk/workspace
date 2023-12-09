@@ -109,6 +109,67 @@ $projectData = array(
             '시청자별 시청 영상 제외하고 개인화 영상 제공'
         )
     ),
+    '3' => array(
+        'id' => 3,
+        'title' => '삼국지 계산판',
+        'kind' => '개인 프로젝트',
+        'summary' => '모바일 게임 [삼국지 전략판]<br>데이터 정보, 편의 기능',
+        'service' => '
+            유저들에게 모바일 게임 [삼국지 전략판]에 대한 데이터와 편의 기능을 제공하는 사이트 입니다.
+            <br>단순 계산 기능부터 좌표 계산, 유저 데이터 등록/삭제 Admin, 게임과 완전 동일한 모의전투를 시뮬레이션 할 수 있는 기능을 제공합니다.
+        ',
+        'stack' => array(
+            array(
+                'tag' => 'bac',
+                'text' => 'PHP'
+            ),
+            array(
+                'tag' => 'db',
+                'text' => 'mySql'
+            ),
+            array(
+                'tag' => 'fro',
+                'text' => 'javascript'
+            ),
+            array(
+                'tag' => 'fro',
+                'text' => 'jQuery'
+            ),
+            array(
+                'tag' => 'pub',
+                'text' => 'CSS'
+            ),
+        ),
+        'link' => 'http://www.lifebefore.co.kr/samgepan/test_simulation.php',
+        'thumb' => array(
+            'image' => 'http://www.lifebefore.co.kr/samgepan/images/samgepan_main.png',
+            'style' => 'background: radial-gradient(circle, #bf8f73, #624040)',
+            'imageStyle' => 'height:70%; width:auto;',
+        ),
+        'contentPage'=>true,
+        'workImage' => array(
+            './images/work/work_3/1.PNG',
+            './images/work/work_3/2.PNG',
+            './images/work/work_3/3.PNG',
+            './images/work/work_3/4.PNG',
+            './images/work/work_3/5.PNG',
+            './images/work/work_3/6.PNG',
+            './images/work/work_3/7.PNG',
+            './images/work/work_3/8.PNG',
+            './images/work/work_3/9.PNG',
+            './images/work/work_3/10.PNG',
+            './images/work/work_3/11.PNG',
+        ),
+        'workTask' => array(
+            '사용자 유입 유도',
+            '단순 계산의 유저 편의성을 개선',
+            '<strong>게임의 전투를 모의전투 시뮬레이션으로 동일하게 구현</strong>',
+            '모의 전투 상황별 수치 계산, 동적 변동값, 환경 요소, 지속형 수치, 특수 변수등을 모두 근접하게 구현, 동일 환경이여도 확률 변수로 다른 결과 도출(게임과 동일)',
+            '사용자가 복잡한 데이터를 등록할 수 있도록 세분화된 입력 기능',
+            '사용자가 데이터 관리 페이지',
+            '모바일 유저를 위해 반응형 대응'
+        )
+    ),
     '1' => array(
         'id' => 1,
         'title' => '라이프비포어',
@@ -221,15 +282,12 @@ $projectData = array(
             '모바일 유저를 위해 반응형 대응'
         )
     ),
-    '3' => array(
-        'id' => 3,
-        'title' => '삼국지 계산판',
+    '10' => array(
+        'id' => 10,
+        'title' => '언던 유틸',
         'kind' => '개인 프로젝트',
-        'summary' => '모바일 게임 [삼국지 전략판]<br>데이터 정보, 편의 기능',
-        'service' => '
-            유저들에게 모바일 게임 [삼국지 전략판]에 대한 데이터와 편의 기능을 제공하는 사이트 입니다.
-            <br>단순 계산 기능부터 좌표 계산, 유저 데이터 등록/삭제 Admin, 게임과 완전 동일한 모의전투를 시뮬레이션 할 수 있는 기능을 제공합니다.
-        ',
+        'summary' => '모바일 게임 [언던]<br>데이터 정보, 편의 기능',
+        'service' => '유저들에게 모바일 게임 [언던]에 대한 데이터와 편의 기능을 제공하는 사이트 입니다.<br>트리형 조합이 복잡하여 계산하기 어려운 부분에 대해 편의성을 제공합니다.<br>유용한 정보를 유저가 등록하고 조회할 수 있습니다.<br>게임 내 시스템을 분석하여 관련 정보를 제공합니다.',
         'stack' => array(
             array(
                 'tag' => 'bac',
@@ -252,33 +310,21 @@ $projectData = array(
                 'text' => 'CSS'
             ),
         ),
-        'link' => 'http://www.lifebefore.co.kr/samgepan/index.php',
+        'contentPage'=>false,
+        'link' => 'http://www.lifebefore.co.kr/undawn_util',
         'thumb' => array(
-            'image' => 'http://www.lifebefore.co.kr/samgepan/images/samgepan_main.png',
-            'style' => 'background: radial-gradient(circle, #bf8f73, #624040)',
-            'imageStyle' => 'height:70%; width:auto;',
+            'image' => './images/undawn_bg.png',
+            'imageStyle' => 'height:100%; width:100%; object-fit:cover;',
         ),
-        'contentPage'=>true,
         'workImage' => array(
-            './images/work/work_3/1.PNG',
-            './images/work/work_3/2.PNG',
-            './images/work/work_3/3.PNG',
-            './images/work/work_3/4.PNG',
-            './images/work/work_3/5.PNG',
-            './images/work/work_3/6.PNG',
-            './images/work/work_3/7.PNG',
-            './images/work/work_3/8.PNG',
-            './images/work/work_3/9.PNG',
-            './images/work/work_3/10.PNG',
-            './images/work/work_3/11.PNG',
+            './images/work/work_10/1.png',
+            './images/work/work_10/2.png',
+            './images/work/work_10/3.png',
+            './images/work/work_10/4.png',
         ),
         'workTask' => array(
             '사용자 유입 유도',
-            '단순 계산의 유저 편의성을 개선',
-            '<strong>게임의 전투를 모의전투 시뮬레이션으로 동일하게 구현</strong>',
-            '모의 전투 상황별 수치 계산, 동적 변동값, 환경 요소, 지속형 수치, 특수 변수등을 모두 근접하게 구현, 동일 환경이여도 확률 변수로 다른 결과 도출(게임과 동일)',
-            '사용자가 복잡한 데이터를 등록할 수 있도록 세분화된 입력 기능',
-            '사용자가 데이터 관리 페이지',
+            '복잡한 tree구조의 조합식의 가격 정보와 필요 갯수를 최대한 보기 편하게 정리',
             '모바일 유저를 위해 반응형 대응'
         )
     ),

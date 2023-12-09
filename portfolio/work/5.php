@@ -1,6 +1,15 @@
 <?php
     $workReceipt = [
         [
+            'head' => '구매 옵션 신규 기능 추가',
+            'sub' => [
+                '기존과 다른 종류의 구매 옵션 추가',
+            ],
+            'participation' => array(
+                'FrontEnd(100%)',
+            )
+        ],
+        [
             'head' => '영상 장보기',
             'sub' => [
                 '숏폼 컨텐츠 제공 서비스',
@@ -141,7 +150,7 @@
    
 
 <div class="detail_content">
-    <h2>주요 프로젝트</h2>
+    <h2>주요 프로젝트 (2019.07.27 ~ 재직중)</h2>
     <?php foreach($workReceipt as $row) : ?>
         <div class="main_item">
             <div class="head"><?=$row['head'] ?></div>
