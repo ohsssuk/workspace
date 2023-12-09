@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141239150-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141239150-1');
+    </script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4126261814359480",
+        enable_page_level_ads: true
+      });
+    </script>
+
+    <title>라이프비포어 - LIFEBEFORE</title>
+    
+    <meta charset="utf-8" />
+    <meta property="og:site_name" content="라이프비포어" /> 
+	<meta property="og:title" content="라이프비포어" />
+    <meta property="og:description" content="라이프애프터 유틸리티 웹사이트" />
+    <meta property="og:image" content="http://lifebefore.dothome.co.kr/images/thumb.jpg" /> <!-- 1200X630 -->
+	<meta property="og:image:width" content="610" />
+	<meta property="og:image:height" content="319" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="./images/favi.png" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/lb_cal.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script  src="https://code.jquery.com/jquery-3.3.1.js"  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            var rcsString = '';
+            var para = document.location.href.split("?");
+            if(para[1]!=null){
+                alert('자동 입력 했습니다.');
+                var a = para[1].split(',');
+                rcsString = '?'+para[1];
+                var exRcsAuto = [a[28],a[35]];
+                for(var i=0;i<exRcsAuto.length;i++){
+                    $('.need_gold>li:nth-child('+(i+1)+') .exg_money').val(exRcsAuto[i]);
+                }
+                $('.ex_auto_rcs_money').css({display:'none'});
+            }
+            $('.ex_kind>li').on('click',function(){
+                var index = $(this).index();
+                if(index==0){
+                    location.href='./exchange.html'+rcsString;
+                }else if(index==1){
+                    location.href='./exchange_2.html'+rcsString;
+                }else if(index==2){
+                    location.href='./exchange_3.html'+rcsString;
+                }
+            });
+        });
+    </script>
+    
+    <style>
+        .ex_kind li:nth-child(2){
+            color:#fff;
+            background:#506677;
+            padding:5px 20px;
+        }
+        .allcredit_serv{
+            display: inline-block;
+            background:#506677;
+            padding:5px 10px;
+            color:#fff;
+            margin-top:5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="inner_header">
+        <ul class="gnb">
+            <li><a href="index.html">원가 계산기</a></li>
+            <li><a href="exchange.html">환율 계산기</a></li>
+            <li><a href="weapon_cal.html">★무기 계산기</a></li>
+            <li><a href="usermake.php">서버별 단가</a></li>
+            <li><a href="map_checker.html">맵별 정보</a></li>
+        </ul>
+    </div>
+</header>
+<div class="main">
+    <div class="exchange">
+        <h1>환율 계산기</h1>
+        <h2>상단 시장, 재난국 등. 애매한 화폐 가치를 알아보자</h2>
+        <ul class="ex_kind">
+            <li>상단시장 <span>(06.05-06.25)</span></li><!--
+            --><li>쉐어 플랜 <span>(06.05-06.25)</span></li><!--
+            --><li>재난국 <span>(임의)</span></li>
+        </ul>
+        <h3>
+            <p><i class="fas fa-exclamation-circle"></i> 매번 단가를 입력하기가 귀찮다면 자신만의 단가 목록을 만들어보세요 <a href="userset.html"><span>#만들러 가기</span></a></p>
+            <p>- <span>연맹 크레딧</span>은 <span>[상점 특가 패키지]</span> 가격을 기준으로 <span>1연맹 크레딧 = 120골드 = 140신화폐</span>로 계산합니다.</p>
+            <p>- 배합 조각, 연구 데이터는 10장 상품이여도 <span>정상가(할인 X) 20장 가격을 기준</span>으로 합니다.</p>
+            <p>- <span>솜털, 솜뭉치, 깃털</span>은 <span>포인트제</span>로 계산합니다. 상단시장 연맹 크레딧 기준 개당 <span>[솜털 8점, 솜뭉치 4점, 깃털 2점]</span>입니다. 획득 확률에 비례해 게임사에서 상단시장 가격을 잘 조정했을 거라 믿...습니다.</p>
+            <p>- <span>1 포인트</span>는 <span>상단시장</span> 가격을 기준으로 <span>1포인트 = 0.125 연맹 크레딧</span>입니다.</p>
+            <p>- 가격란에 표시된 크레딧가격은 상단시장에서 솜털류 재료를 구매했을 때, 환산 가격입니다. 연구 데이터는 재료를 크레딧으로 사서 쉐어플랜에서 구매해도 효율이 좋습니다. 고려해보세요.</p>
+            <p>- 표시된 아이템 가치는 골드를 기준으로 한 <span>대략적인 예상 가치</span>이므로 절대적인 가치는 아닙니다.</p>
+        </h3>
+        <div class="part_help">
+            해당 아이템의 거래의 도시 가격을 입력해주세요. <b>아래 버튼으로 자동 입력할 수 있습니다.</b>
+        </div>
+        <ul class="ex_cont">
+            <li>
+                <ul class="need_gold">
+                    <li class="gazi">
+                        <div class="rcs_name">고분자 코팅</div>
+                        <img src="./images/rcs/coat.png" alt="아이템 이미지" class="rcs_img">
+                        <div class="rcs_foot">
+                            <input type="text" placeholder="현재 단가" class="exg_money"> 골드
+                            <input type="hidden" value="10" class="exg_many">
+                        </div>
+                    </li>
+                    <li class="gazi">
+                        <div class="rcs_name">얇은 원단</div>
+                        <img src="./images/rcs/silk.png" alt="아이템 이미지" class="rcs_img">
+                        <div class="rcs_foot">
+                            <input type="text" placeholder="현재 단가" class="exg_money"> 골드
+                            <input type="hidden" value="10" class="exg_many">
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3><i class="fas fa-exclamation-circle"></i> <span>서버별 단가</span>에서 다른 사람 혹은 자신이 만들어 놓은 데이터로 <span>자동입력</span> 할 수 있습니다. <a href="usermake.php"><span>#서버별 단가 가기</span></a></h3><br />
+        <a href="usermake.php"><button class="ex_auto_rcs_money">
+            서버별 단가로 자동 입력
+        </button></a>
+        <button class="ex_final_btn ex_final_btn_ex_2">확인</button>
+        <div class="ex_final">
+            <table>
+                <tr>
+                    <th width="30%">아이템</th>
+                    <th width="45%">가격</th>
+                    <th width="*">1포인트 = 골드</th>
+                </tr>
+                <tr>
+                    <td>고분자 코팅</td>
+                    <td>
+                        20 솜털 / 20 솜뭉치 / 20 깃털 <br /><p class="allcredit_serv"></p>
+                        <input type="hidden" class="exf_tropy" value="20">
+                        <input type="hidden" class="exf_goldbar" value="20">
+                        <input type="hidden" class="exf_credit" value="20">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>배합 조각 10장</td>
+                    <td>
+                        20 솜털 / 10 솜뭉치 <br /><p class="allcredit_serv"></p>
+                        <input type="hidden" class="exf_tropy" value="20">
+                        <input type="hidden" class="exf_goldbar" value="10">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>연구 데이터 10장</td>
+                    <td>
+                        15 솜털 / 10 깃털 <br /><p class="allcredit_serv"></p>
+                        <input type="hidden" class="exf_tropy" value="15">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="10">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>얇은 원단</td>
+                    <td>
+                        10 솜뭉치 / 30 깃털 <br /><p class="allcredit_serv"></p>
+                        <input type="hidden" class="exf_tropy" value="0">
+                        <input type="hidden" class="exf_goldbar" value="10">
+                        <input type="hidden" class="exf_credit" value="30">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>100 신화폐</td>
+                    <td>
+                        1 솜털 <br /><p class="allcredit_serv"></p>
+                        <input type="hidden" class="exf_tropy" value="1">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>30 스킬 포인트</td>
+                    <td>
+                        1 솜뭉치 <br /><p class="allcredit_serv"></p>
+                        <input type="hidden" class="exf_tropy" value="0">
+                        <input type="hidden" class="exf_goldbar" value="1">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+            </table>
+            <div class="ex_best ex_rate">
+                <p>최고의 환율</p>
+                <p><span class="ex_rating_name"></span>이(가) 1포인트 = <span class="ex_rating_money"></span>골드로 가장 높습니다.</p>
+            </div>
+            <div class="ex_worst ex_rate">
+                <p>최악의 환율</p>
+                <p><span class="ex_rating_name"></span>이(가) 1포인트 = <span class="ex_rating_money"></span>골드로 가장 낮습니다.</p>
+            </div>
+        </div> 
+        <footer>
+            <div class="inner_footer">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWzjpZq12rJyPKXHHw7cPuKDcmIy2eWKn7Ckn64csRP4sLmw/viewform?usp=sf_link" target="_blank">건의사항 쓰기</a>
+            </div>
+        </footer>
+        
+        <div class="ad_box">
+            <img src="./images/ad_thumb.jpeg" alt="">
+        </div>
+    </div>
+</div>
+</body>
+</html>

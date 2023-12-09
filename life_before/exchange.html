@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141239150-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141239150-1');
+    </script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4126261814359480",
+        enable_page_level_ads: true
+      });
+    </script>
+
+    <title>라이프비포어 - LIFEBEFORE</title>
+    
+    <meta charset="utf-8" />
+    <meta property="og:site_name" content="라이프비포어" /> 
+	<meta property="og:title" content="라이프비포어" />
+    <meta property="og:description" content="라이프애프터 유틸리티 웹사이트" />
+    <meta property="og:image" content="http://lifebefore.dothome.co.kr/images/thumb.jpg" /> <!-- 1200X630 -->
+	<meta property="og:image:width" content="610" />
+	<meta property="og:image:height" content="319" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="./images/favi.png" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/lb_cal.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script  src="https://code.jquery.com/jquery-3.3.1.js"  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/event.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            var rcsString = '';
+            var para = document.location.href.split("?");
+            if(para[1]!=null){
+                alert('자동 입력 했습니다.');
+                var a = para[1].split(',');
+                rcsString = '?'+para[1];
+                var exRcsAuto = [a[28],a[35],a[8],a[0],a[9],a[4],a[2],a[10],a[18]];
+                for(var i=0;i<exRcsAuto.length;i++){
+                    $('.need_gold>li:nth-child('+(i+1)+') .exg_money').val(exRcsAuto[i]);
+                }
+                $('.ex_auto_rcs_money').css({display:'none'});
+            }
+            
+            $('.ex_kind>li').on('click',function(){
+                var index = $(this).index();
+                if(index==0){
+                    location.href='./exchange.html'+rcsString;
+                }else if(index==1){
+                    location.href='./exchange_2.html'+rcsString;
+                }else if(index==2){
+                    location.href='./exchange_3.html'+rcsString;
+                }
+            });
+        });
+    </script>
+    
+    <style>
+        .ex_kind li:nth-child(1){
+            color:#fff;
+            background:#506677;
+            padding:5px 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="side_ad side_ad_left">
+    
+</div>
+<div class="side_ad side_ad_right">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- 사이드_광고 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-4126261814359480"
+         data-ad-slot="6460167305"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<header>
+    <div class="inner_header">
+        <ul class="gnb">
+            <li><a href="index.html">원가 계산기</a></li>
+            <li><a href="exchange.html">환율 계산기</a></li>
+            <li><a href="weapon_cal.html">★무기 계산기</a></li>
+            <li><a href="usermake.php">서버별 단가</a></li>
+            <li><a href="map_checker.html">맵별 정보</a></li>
+        </ul>
+    </div>
+</header>
+<div class="main">
+    <div class="exchange">
+        <h1>환율 계산기</h1>
+        <h2>상단 시장, 재난국 등. 애매한 화폐 가치를 알아보자</h2>
+        <br />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 디스플레이_수평 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4126261814359480"
+             data-ad-slot="5536762597"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        <ul class="ex_kind">
+            <li>상단시장 <span>(06.26-07.09)</span><!--</li>
+            <li>쉐어 플랜 <span>(06.05-06.25)</span></li>
+            <li>재난국 <span>(임의)</span></li>-->
+        </ul>
+        <h3>
+            <p><i class="fas fa-exclamation-circle"></i> 매번 단가를 입력하기가 귀찮다면 자신만의 단가 목록을 만들어보세요 <a href="userset.html"><span>#만들러 가기</span></a></p>
+            <p>- <span>단위</span>는 <span>[상점 특가 패키지]</span> 가격을 기준으로 <span>1연맹 크레딧 = 120골드 = 140신화폐</span>로 계산합니다.</p>
+            <p>- <span>기계 재료, 방어구 재료</span>는 환율 계산기 크레딧 가치 기준 2400골드지만 2000골드 상품이 있으므로 2000골드로 계산합니다.</p>
+            <p>- 상가에서 파는 아이템은 <span>상가 가격을 기준</span>으로 합니다(예: 합금드릴 = 800골드).</p>
+            <p>- 너무 비효율적인 아이템은 표시하지 않습니다. 그러나 본인의 상황에 따라 효율적인 선택이 될 수 있습니다.</p>
+            <p>- 표시된 아이템 가치는 골드를 기준으로 한 <span>대략적인 예상 가치</span>이므로 절대적인 가치는 아닙니다.</p>
+        </h3>
+        <div class="part_help">
+            해당 아이템의 거래의 도시 가격을 입력해주세요. <b>아래 버튼으로 자동 입력할 수 있습니다.</b>
+        </div>
+        <ul class="ex_cont">
+            <li>
+                <ul class="need_gold">
+                   <li class="gazi">
+                        <div class="rcs_name">고분자 코팅</div>
+                        <img src="./images/rcs/coat.png" alt="아이템 이미지" class="rcs_img">
+                        <div class="rcs_foot">
+                            <input type="text" placeholder="현재 단가" class="exg_money"> 골드
+                            <input type="hidden" value="10" class="exg_many">
+                        </div>
+                    </li>
+                    <li class="gazi">
+                        <div class="rcs_name">얇은 원단</div>
+                        <img src="./images/rcs/silk.png" alt="아이템 이미지" class="rcs_img">
+                        <div class="rcs_foot">
+                            <input type="text" placeholder="현재 단가" class="exg_money"> 골드
+                            <input type="hidden" value="10" class="exg_many">
+                        </div>
+                    </li>
+                   <li class="gazi">
+                        <div class="rcs_name">철광석</div>
+                        <img src="./images/rcs/chul.png" alt="아이템 이미지" class="rcs_img">
+                        <div class="rcs_foot">
+                            <input type="text" placeholder="현재 단가" class="exg_money"> 골드
+                            <input type="hidden" value="10" class="exg_many">
+                        </div>
+                    </li>
+                    <li class="gazi">
+                        <div class="rcs_name">나뭇가지</div>
+                        <img src="./images/rcs/gazi.png" alt="아이템 이미지" class="rcs_img">
+                        <div class="rcs_foot">
+                            <input type="text" placeholder="현재 단가" class="exg_money"> 골드
+                            <input type="hidden" value="10" class="exg_many">
+                        </div>
+                    </li>
+                    <li class="gazi">
+                        <div class="rcs_name">주석광</div>
+                        <img src="./images/rcs/juseuk.png" alt="아이템 이미지" class="rcs_img">
+                        <div class="rcs_foot">
+                            <input type="text" placeholder="현재 단가" class="exg_money"> 골드
+                            <input type="hidden" value="10" class="exg_many">
+                        </div>
+                    </li>
+                    <li class="gazi">
+                        <div class="rcs_name">목심</div>
+                        <img src="./images/rcs/moksim.png" alt="아이템 이미지" class="rcs_img">
+                        <div class="rcs_foot">
+                            <input type="text" placeholder="현재 단가" class="exg_money"> 골드
+                            <input type="hidden" value="10" class="exg_many">
+                        </div>
+                    </li>
+                    <li class="gazi">
+                        <div class="rcs_name">늙은 편백나무</div>
+                        <img src="./images/rcs/oldnamu.png" alt="아이템 이미지" class="rcs_img">
+                        <div class="rcs_foot">
+                            <input type="text" placeholder="현재 단가" class="exg_money"> 골드
+                            <input type="hidden" value="10" class="exg_many">
+                        </div>
+                    </li>
+                    <li class="gazi">
+                        <div class="rcs_name">알루미늄 광석</div>
+                        <img src="./images/rcs/alu.png" alt="아이템 이미지" class="rcs_img">
+                        <div class="rcs_foot">
+                            <input type="text" placeholder="현재 단가" class="exg_money"> 골드
+                            <input type="hidden" value="10" class="exg_many">
+                        </div>
+                    </li>
+                    <li class="gazi">
+                        <div class="rcs_name">린넨잎</div>
+                        <img src="./images/rcs/lin.png" alt="아이템 이미지" class="rcs_img">
+                        <div class="rcs_foot">
+                            <input type="text" placeholder="현재 단가" class="exg_money"> 골드
+                            <input type="hidden" value="10" class="exg_many">
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3><i class="fas fa-exclamation-circle"></i> <span>서버별 단가</span>에서 다른 사람 혹은 자신이 만들어 놓은 데이터로 <span>자동입력</span> 할 수 있습니다. <a href="usermake.php"><span>#서버별 단가 가기</span></a></h3><br />
+        <a href="usermake.php"><button class="ex_auto_rcs_money">
+            서버별 단가로 자동 입력
+        </button></a>
+        <button class="ex_final_btn ex_final_btn_ex_1">확인</button>
+        <div class="ex_final">
+            <table>
+                <tr>
+                    <th width="30%">아이템</th>
+                    <th width="45%">가격</th>
+                    <th width="*">1명예증서 = 골드</th>
+                </tr>
+                <tr>
+                    <td>칩 광각펜</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 260
+                        <input type="hidden" class="exf_tropy" value="260">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>모듈 에칭액</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 120
+                        <input type="hidden" class="exf_tropy" value="120">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>칩 광각펜</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 40 / <img src="./images/credit.png" alt="골드" class="money_icon"> 20
+                        <input type="hidden" class="exf_tropy" value="40">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="20">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>모듈 에칭액</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 20 / <img src="./images/credit.png" alt="골드" class="money_icon"> 10
+                        <input type="hidden" class="exf_tropy" value="20">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="10">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>고분자 코팅</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 75
+                        <input type="hidden" class="exf_tropy" value="75">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>얇은 원단</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 25
+                        <input type="hidden" class="exf_tropy" value="25">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>고분자 코팅</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 15 / <img src="./images/credit.png" alt="골드" class="money_icon"> 25
+                        <input type="hidden" class="exf_tropy" value="15">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="25">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>얇은 원단</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 13 / <img src="./images/credit.png" alt="골드" class="money_icon"> 5
+                        <input type="hidden" class="exf_tropy" value="13">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="5">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>철제드릴</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 30 / <img src="./images/goldbar.png" alt="골드" class="money_icon"> 100
+                        <input type="hidden" class="exf_tropy" value="30">
+                        <input type="hidden" class="exf_goldbar" value="100">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>합금드릴</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 60 / <img src="./images/goldbar.png" alt="골드" class="money_icon"> 200
+                        <input type="hidden" class="exf_tropy" value="60">
+                        <input type="hidden" class="exf_goldbar" value="200">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>40 신화폐</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 1
+                        <input type="hidden" class="exf_tropy" value="1">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="1">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>철광석</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 9
+                        <input type="hidden" class="exf_tropy" value="9">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="10">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>나뭇가지</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 10
+                        <input type="hidden" class="exf_tropy" value="10">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="10">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>주석광</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 10
+                        <input type="hidden" class="exf_tropy" value="10">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="10">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>목심</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 20
+                        <input type="hidden" class="exf_tropy" value="20">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="10">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>늙은 편백나무</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 15
+                        <input type="hidden" class="exf_tropy" value="15">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="10">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>알루미늄 광석</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 20
+                        <input type="hidden" class="exf_tropy" value="20">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="10">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+                <tr>
+                    <td>린넨잎</td>
+                    <td>
+                        <img src="./images/tropy.png" alt="트로피" class="money_icon"> 40
+                        <input type="hidden" class="exf_tropy" value="40">
+                        <input type="hidden" class="exf_goldbar" value="0">
+                        <input type="hidden" class="exf_credit" value="0">
+                        <input type="hidden" class="exf_many" value="10">
+                    </td>
+                    <td class="ex_veni"></td>
+                </tr>
+            </table>
+            <div class="ex_best ex_rate">
+                <p>최고의 환율</p>
+                <p><span class="ex_rating_name"></span>이(가) 훈련 트로피당 <span class="ex_rating_money"></span>골드로 가장 높습니다.</p>
+            </div>
+            <div class="ex_worst ex_rate">
+                <p>최악의 환율</p>
+                <p><span class="ex_rating_name"></span>이(가) 훈련 트로피당 <span class="ex_rating_money"></span>골드로 가장 낮습니다.</p>
+            </div>
+        </div>
+        <!--
+        <div class="rull_play">
+            <div class="rull_title">재미 삼아 돌려보는 예상 룰렛</div>
+            <h3>
+                <p>배합에 자신이 생각하는 골드 가치를 입력해주세요.</p>
+                <p>- <span>단위</span>는 <span>[상점 특가 패키지]</span> 가격을 기준으로 <span>1연맹 크레딧 = 120골드 = 140신화폐</span>로 계산합니다.</p>
+                <p>- 레인색, 설원색, 소장판은 해당 배합을 얻은 후부터 확률에 포함됩니다.</p>
+                <p>- 골드가치 : 고분자 = 3500, 얇은 원단 = 800, 철근 = 200, 플라스틱 = 300, 천 = 50, 2000 신화폐 = 1714, 나머지 상점 정상가.</p>
+                <p>- <span>확률은 카페 공식 정보 기준으로 한치의 오차도 없이 매우 정확합니다...</span></p>
+            </h3>
+            <ul class="rull_editor">
+                <li>
+                   <p>95식 배합 추정 가치(골드)</p>
+                   <input type="text" value="1000000">
+                </li>
+                <li>
+                   <p>95식[레인색] 배합 추정 가치(골드)</p>
+                   <input type="text" value="2000000">
+                </li>
+                <li>
+                   <p>95식[설원색] 배합 추정 가치(골드)</p>
+                   <input type="text" value="3000000">
+                </li>
+                <li>
+                   <p>95식[소장판] 배합 추정 가치(골드)</p>
+                   <input type="text" value="6000000">
+                </li>
+                <li>
+                   <p>반곡활 배합 추정 가치(골드)</p>
+                   <input type="text" value="400000">
+                </li>
+                <li>
+                   <p>반곡활[레인색] 배합 추정 가치(골드)</p>
+                   <input type="text" value="600000">
+                </li>
+                <li>
+                   <p>반곡활[설원색] 배합 추정 가치(골드)</p>
+                   <input type="text" value="700000">
+                </li>
+                <li>
+                   <p>반곡활[소장판] 배합 추정 가치(골드)</p>
+                   <input type="text" value="800000">
+                </li>
+            </ul>
+            <div class="rull_btn_set">
+                <button class="rull_btn rull_btn_1">룰렛 1회</button>
+                <button class="rull_btn rull_btn_2">룰렛 5회</button>
+            </div>
+            <div class="rull_result">
+                <div class="rull_con">룰렛 횟수 : <span></span></div>
+                <div class="rull_con">
+                    <h3>획득 아이템</h3>
+                    <div class="rull_con_list">
+                        
+                    </div>
+                </div>
+                <div class="rull_con">
+                    <h3>사용</h3>
+                    <span></span>
+                </div>
+                <div class="rull_con">
+                    <h3>1크레딧 = 골드 획득</h3>
+                    <span></span>
+                </div>
+                <div class="rull_con">
+                    <h3>1트로피 = 골드 획득</h3>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        -->
+        <br /><br />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 디스플레이_수평 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4126261814359480"
+             data-ad-slot="5536762597"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <!-- 댓글창 시작 -->
+        <h6 class="rp_title">LIFEREPLY</h6>
+        <div class="rp_help">
+            전체 댓글 목록입니다. 건의사항, 하고 싶은 말, 잡담 등을 작성해주세요. 라이프애프터 관련이라면 광고도 허용합니다.
+        </div>
+        <script>
+            function rp_check(){
+                if(rp_fr.rt_writer.value == "" || rp_fr.rt_pwd.value == "" || rp_fr.rt_text.value == "") {
+                    alert("빈칸을 모두 입력해야 합니다");
+                    return false;
+                }
+            }
+        </script>
+        <form action="./reply_proc.php?wtype=wr" method="post" name="rp_fr" onsubmit="return rp_check()">
+        <div class="rp_write">
+            <input type="text" placeholder="작성자" name="rt_writer">
+            <input type="text" placeholder="비밀번호" name="rt_pwd">
+            <textarea name="rt_text" id="" placeholder="내용을 입력해주세요" name="rt_text"></textarea>
+            <input type="submit" class="reply_btn" value="등록">
+        </div>
+        </form>
+        <iframe src="./reply.php" frameborder="0" class="reply_frame" scrolling="auto"></iframe>
+        <!-- 댓글창 종료 -->
+        <footer>
+            <div class="inner_footer">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWzjpZq12rJyPKXHHw7cPuKDcmIy2eWKn7Ckn64csRP4sLmw/viewform?usp=sf_link" target="_blank">건의사항 쓰기</a>
+            </div>
+        </footer>
+        
+        <div class="ad_box">
+            <img src="./images/ad_thumb.jpeg" alt="">
+        </div>
+    </div>
+</div>
+</body>
+</html>
