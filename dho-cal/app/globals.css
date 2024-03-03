@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('../public/pretendard/web/variable/woff2/PretendardVariable.woff2')
+    format('woff2-variations');
+}
+html.app,
+html.app input,
+html.app select {
+  font-family: 'Pretendard', sans-serif;
+  color: #46433f;
+}
+html.app input,
+html.app select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+html.app input::placeholder {
+  color: #888;
+}
