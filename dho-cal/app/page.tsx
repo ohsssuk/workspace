@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
-import Naedolswe from '@/containers/naedolswe/Naedolswe';
+import Fleet from '@/containers/fleet/Fleet';
 
 export default function Home() {
   return (
     <main>
-      <Naedolswe />
+      <Fleet />
     </main>
   );
 }

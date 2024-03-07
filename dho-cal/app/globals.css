@@ -26,3 +26,6 @@ html.app select {
 html.app input::placeholder {
   color: #888;
 }
+button{
+  cursor: pointer;
+}

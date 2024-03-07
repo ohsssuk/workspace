@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 type InputProps = {
   id?: string;
   className?: string;
@@ -17,29 +15,21 @@ export default function Input({
   type = 'text',
   onChange,
 }: InputProps) {
-  const [inputValue, setInputValue] = useState(value);
-
-  const handleChange = (value: string) => {
-    setInputValue(value);
-
+  const handleInputChange = (value: string) => {
     if (onChange) {
       onChange(value);
     }
   };
-
-  useEffect(() => {
-    setInputValue(value);
-  }, [value]);
 
   return (
     <div className={className}>
       <input
         id={id}
         type={type}
-        value={inputValue}
+        value={value}
         placeholder={placeholder}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          handleChange(e.target.value)
+          handleInputChange(e.target.value)
         }
       />
     </div>
