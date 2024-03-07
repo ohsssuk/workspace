@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
+import Button from '@/components/Button';
+
 import ShipItem from './ShipItem';
 import { ShipItemProps } from './ShipItemProps';
 
@@ -44,8 +46,8 @@ export default function Fleet() {
   };
 
   return (
-    <div className={styles.wrap}>
-      <ul className={styles.list}>
+    <div className={`${styles.wrap}`}>
+      <ul className={`${styles.list}`}>
         {useShips.map((item, index) => (
           <ShipItem
             key={index}
@@ -55,7 +57,7 @@ export default function Fleet() {
           />
         ))}
         <li className={`${styles.item} ${styles.add}`}>
-          <button onClick={addUseShip}>선박 추가</button>
+          <Button onClick={addUseShip}>선박 추가</Button>
         </li>
       </ul>
     </div>

@@ -8,12 +8,16 @@
   padding: 4px;
 }
 .item {
-  width: calc(50% - 8px);
-  max-width: 320px;
+  width: calc(25% - 8px);
   background: #fff;
   margin: 4px;
   flex-grow: 0;
   flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .item {
+    width: calc(50% - 8px);
+  }
 }
 
 .item.add {
