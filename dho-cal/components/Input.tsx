@@ -28,6 +28,7 @@ export default function Input({
         type={type}
         value={value}
         placeholder={placeholder}
+        className={`px-2 py-1 rounded-md border border-gray-300 outline-none text-base leading-normal w-full placeholder-gray-700::placeholder`}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           handleInputChange(e.target.value)
         }

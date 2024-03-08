@@ -30,7 +30,7 @@
   height: 100px;
 }
 
-.item label {
+.item .stat_row label {
   font-size: 13px;
   line-height: 20px;
   font-weight: 700;

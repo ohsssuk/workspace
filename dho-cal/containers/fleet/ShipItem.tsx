@@ -1,4 +1,6 @@
 'use client';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 import Image from 'next/image';
 import { ShipItemProps } from './ShipItemProps';
@@ -46,14 +48,16 @@ export default function ShipItem({
       <section className={styles.menu}>
         <div>
           <Checkbox
-            id="d"
-            label="사용"
+            id={`1`}
+            label={`${option.isUse ? '사용' : '대기'}`}
             checked={option.isUse}
             onChange={(value) => changeShipStat({ index, key: 'isUse', value })}
           />
         </div>
         <div>
-          <Button onClick={deleteShipItem}>삭제</Button>
+          <Button onClick={deleteShipItem}>
+            <FontAwesomeIcon icon={faTrashAlt} className="text-gray-600" />
+          </Button>
         </div>
       </section>
       <section className={styles.head}>
@@ -78,7 +82,7 @@ export default function ShipItem({
               type="number"
               id={`${stat.val}_${index}`}
               className={styles.input}
-              value={String(option[stat.val])}
+              value={String(option[stat.val] ?? '')}
               placeholder={`${stat.placeholder ?? `${stat.kor} 입력`}`}
               onChange={(value) =>
                 changeShipStat({ index, key: stat.val, value: Number(value) })

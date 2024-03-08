@@ -1,5 +1,8 @@
 'use client';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
 import { useEffect, useState } from 'react';
 
 import Button from '@/components/Button';
@@ -14,10 +17,12 @@ import styles from './fleet.module.css';
 export default function Fleet() {
   const [lastIndex, setLastIndex] = useState<number>(0);
   const [useShips, setUseShips] = useState<ShipItemProps[]>([]);
+  const [isInit, setIsInit] = useState<boolean>(false);
 
   useEffect(() => {
     setUseShips([createShipItem({ name: '1번 선박' })]);
     setLastIndex(1);
+    setIsInit(true);
   }, []);
 
   useEffect(() => {
@@ -45,6 +50,10 @@ export default function Fleet() {
     setUseShips(newUseShips);
   };
 
+  if (!isInit) {
+    return null;
+  }
+
   return (
     <div className={`${styles.wrap}`}>
       <ul className={`${styles.list}`}>
@@ -57,7 +66,10 @@ export default function Fleet() {
           />
         ))}
         <li className={`${styles.item} ${styles.add}`}>
-          <Button onClick={addUseShip}>선박 추가</Button>
+          <Button onClick={addUseShip}>
+            <FontAwesomeIcon icon={faPlus} className="mr-2 text-lg" />
+            <span className="text-lg">선박 추가</span>
+          </Button>
         </li>
       </ul>
     </div>
