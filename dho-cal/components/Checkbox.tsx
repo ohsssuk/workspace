@@ -29,13 +29,14 @@ export default function Checkbox({
       />
       <label
         htmlFor={id}
-        className={`inline-flex items-center cursor-pointer text-base rounded-md pl-1 pr-2 py-1 ${checked ? 'bg-gray-600' : ''}`}
+        className={`transition duration-200 inline-flex items-center cursor-pointer rounded-full pl-2.5 pr-3 py-1`}
+        style={{ backgroundColor: checked ? 'var(--main500)' : '' }}
       >
         <FontAwesomeIcon
           icon={checked ? faCheckSquare : faSquare}
-          className={`mr-1 w-6 h-6 ${checked ? 'text-white' : 'text-gray-500'}`}
+          className={`mr-1 ${checked ? 'text-white' : 'text-gray-600'}`}
         />
-        <span className={`text-sm ${checked ? 'text-white' : 'text-gray-500'}`}>
+        <span className={`text-sm ${checked ? 'text-white' : 'text-gray-600'}`}>
           {label}
         </span>
       </label>

@@ -1,6 +1,6 @@
 'use client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt, faSailboat } from '@fortawesome/free-solid-svg-icons';
 
 import Image from 'next/image';
 import { ShipItemProps } from './ShipItemProps';
@@ -48,7 +48,7 @@ export default function ShipItem({
       <section className={styles.menu}>
         <div>
           <Checkbox
-            id={`1`}
+            id={`isUse_${index}`}
             label={`${option.isUse ? '사용' : '대기'}`}
             checked={option.isUse}
             onChange={(value) => changeShipStat({ index, key: 'isUse', value })}
@@ -56,17 +56,17 @@ export default function ShipItem({
         </div>
         <div>
           <Button onClick={deleteShipItem}>
-            <FontAwesomeIcon icon={faTrashAlt} className="text-gray-600" />
+            <FontAwesomeIcon icon={faTrashAlt} className="text-gray-500" />
           </Button>
         </div>
       </section>
       <section className={styles.head}>
         <div className={styles.icon}>
-          <Image src="/shipItem/ic-ship.png" alt="" width={64} height={64} />
+          <FontAwesomeIcon icon={faSailboat} />
         </div>
         <div className={styles.name}>
           <Input
-            id={`ship_name_${index}`}
+            id={`name_${index}`}
             value={option.name}
             className={styles.input}
             placeholder="선박 이름"
