@@ -1,8 +1,9 @@
-import { ShipItemProps } from './ShipItemProps';
+import { ShipItemProps } from './item/ShipProps';
 
 export function createShipItem(props: Partial<ShipItemProps>): ShipItemProps {
   return {
     name: props.name ?? '',
+    kind: props.kind ?? 'ship',
     crew: props.crew ?? null,
     minCrew: props.minCrew ?? null,
     durability: props.durability ?? null,

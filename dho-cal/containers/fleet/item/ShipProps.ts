@@ -14,5 +14,12 @@ export type ShipItemProps = {
   stat1: number | null;
   stat2: number | null;
   stat3: number | null;
+  kind: 'ship' | 'armor' | 'anchor' | 'ram';
   isUse: boolean;
+};
+
+export type StatRowProps = {
+  kor: string;
+  val: string;
+  placeholder: string | null;
 };

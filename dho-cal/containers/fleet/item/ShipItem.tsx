@@ -1,14 +1,19 @@
 'use client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashAlt, faSailboat } from '@fortawesome/free-solid-svg-icons';
+import {
+  faTrashAlt,
+  faSailboat,
+  faAnchor,
+  faShield,
+  faTrowel,
+} from '@fortawesome/free-solid-svg-icons';
 
-import Image from 'next/image';
-import { ShipItemProps } from './ShipItemProps';
+import { ShipItemProps } from './ShipProps';
 
-import styles from './fleet.module.css';
+import styles from '../fleet.module.css';
 import Input from '@/components/Input';
 
-import { statRow } from './data';
+import { statRow } from '../data';
 import Checkbox from '@/components/Checkbox';
 import Button from '@/components/Button';
 
@@ -21,7 +26,7 @@ export default function ShipItem({
   index: number;
   onChange: (option: ShipItemProps, index: number) => void;
 }) {
-  const changeShipStat = ({
+  const changeStat = ({
     index,
     key,
     value,
@@ -34,7 +39,9 @@ export default function ShipItem({
     onChange(option, index);
   };
 
-  const deleteShipItem = () => {
+  let itemStatRow = statRow[option.kind];
+
+  const deleteItem = () => {
     if (!confirm(`[${option.name}]을 삭제할까요?`)) {
       return;
     }
@@ -48,44 +55,57 @@ export default function ShipItem({
       <section className={styles.menu}>
         <div>
           <Checkbox
-            id={`isUse_${index}`}
+            id={`${option.kind}_isUse_${index}`}
             label={`${option.isUse ? '사용' : '대기'}`}
             checked={option.isUse}
-            onChange={(value) => changeShipStat({ index, key: 'isUse', value })}
+            onChange={(value) => changeStat({ index, key: 'isUse', value })}
           />
         </div>
         <div>
-          <Button onClick={deleteShipItem}>
+          <Button onClick={deleteItem}>
             <FontAwesomeIcon icon={faTrashAlt} className="text-gray-500" />
           </Button>
         </div>
       </section>
       <section className={styles.head}>
         <div className={styles.icon}>
-          <FontAwesomeIcon icon={faSailboat} />
+          {(() => {
+            switch (option.kind) {
+              case 'armor':
+                return <FontAwesomeIcon icon={faShield} />;
+              case 'anchor':
+                return <FontAwesomeIcon icon={faAnchor} />;
+              case 'ram':
+                return <FontAwesomeIcon icon={faTrowel} />;
+              default:
+                return <FontAwesomeIcon icon={faSailboat} />;
+            }
+          })()}
         </div>
         <div className={styles.name}>
           <Input
-            id={`name_${index}`}
+            id={`${option.kind}_name_${index}`}
             value={option.name}
             className={styles.input}
             placeholder="선박 이름"
-            onChange={(value) => changeShipStat({ index, key: 'name', value })}
+            onChange={(value) => changeStat({ index, key: 'name', value })}
           />
         </div>
       </section>
       <section className={styles.body}>
-        {statRow.map((stat) => (
+        {itemStatRow.map((stat) => (
           <div key={stat.val} className={styles.stat_row}>
-            <label htmlFor={`${stat.val}_${index}`}>{stat.kor}</label>
+            <label htmlFor={`${option.kind}_${stat.val}_${index}`}>
+              {stat.kor}
+            </label>
             <Input
               type="number"
-              id={`${stat.val}_${index}`}
+              id={`${option.kind}_${stat.val}_${index}`}
               className={styles.input}
               value={String(option[stat.val] ?? '')}
               placeholder={`${stat.placeholder ?? `${stat.kor} 입력`}`}
               onChange={(value) =>
-                changeShipStat({ index, key: stat.val, value: Number(value) })
+                changeStat({ index, key: stat.val, value: Number(value) })
               }
             />
           </div>

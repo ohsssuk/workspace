@@ -30,6 +30,7 @@
   max-width: var(--maxWidth);
   z-index: 1;
   overflow: hidden;
+  margin-top: 10px;
 }
 .common_component .head {
   padding: 8px 12px;

@@ -8,9 +8,7 @@ export default function Home() {
       <ContentHeader title="함대 계산기">
         <p>내파, 돌파, 쇄빙 등의 능력치를 계산하여 함대 구성을 추천합니다.</p>
       </ContentHeader>
-      <CommonSection title="선박 입력">
-        <Fleet />
-      </CommonSection>
+      <Fleet />
     </main>
   );
 }
