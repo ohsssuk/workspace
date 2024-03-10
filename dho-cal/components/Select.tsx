@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 type OptionProps = {
-  value: string | number | boolean;
+  value: string | number;
   content: ReactNode;
 };
 
@@ -20,7 +20,7 @@ export default function Select({
 }: SelectProps) {
   const [selectedOption, setSelectedOption] = useState<
     OptionProps['value'] | null
-  >(selectedValue || null);
+  >(selectedValue ?? null);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSelect = (value: OptionProps['value']) => {
@@ -29,10 +29,8 @@ export default function Select({
     setIsOpen(false);
   };
 
-  console.log(selectedValue);
-
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative w-full text-left">
       <button
         type="button"
         className="flex items-center justify-between w-full px-4 py-2 border border-gray-300 rounded cursor-pointer hover:bg-gray-300 focus:outline-none"
