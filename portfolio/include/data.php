@@ -51,6 +51,47 @@ $projectData = array(
             'style' => ' background:#ff5833;'
         ),
     ),
+    '11' => array(
+        'id' => 11,
+        'title' => '대항오 계산기',
+        'kind' => '개인 프로젝트(진행중)',
+        'summary' => '모바일 게임 [대항해시대 오리진] 편의 기능<br>next.js 학습 토이프로젝트',
+        'service' => '
+            유저들에게 모바일 게임 [대항해시대 오리진]에 대한 데이터와 편의 기능을 제공하는 사이트 입니다.
+            <br>next.js 학습을 위한 토이프로젝트 입니다.
+        ',
+        'stack' => array(
+            array(
+                'tag' => 'next',
+                'text' => 'Next.js 14'
+            ),
+            array(
+                'tag' => 'fro',
+                'text' => 'typescript'
+            ),
+            array(
+                'tag' => 'pub',
+                'text' => 'Tailwind CSS'
+            ),
+            array(
+                'tag' => 'pub',
+                'text' => 'CSS'
+            ),
+        ),
+        'link' => 'https://ohsssuk.github.io/dho-cal',
+        'thumb' => array(
+            'image' => './images/work/work_11/bg_dho.png',
+        ),
+        'contentPage'=>true,
+        'workImage' => array(
+     
+        ),
+        'workTask' => array(
+            '입력과 계산 기능을 가진 실제 서비스를 구현하여 Next.js 학습 목적',
+            '동일 컴포넌트를 다른 부분에 최대한 재사용하여 기존 jQuery 토이프로젝트에 비해 코드 간단화 실현 목적',
+            '유저들의 실질적인 사용 편의성이 개선 되었는지 확인'
+        )
+    ),
     '9' => array(
         'id' => 9,
         'title' => '쿠캣 영상장보기',

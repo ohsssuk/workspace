@@ -9,7 +9,10 @@
         <div class="intro">
             <section>
                 <h1>Web Developer</h1>
-                <h2>경험과 이해를 중시하는 개발자</h2>
+                <h2>경험을 중시하는 개발자</h2>   
+                <h3>
+                    Github. <a target="_blank" href="https://github.com/ohsssuk">https://github.com/ohsssuk</a>
+                </h3>
             </section>
         </div>
         <section class="part" data-part="project">
