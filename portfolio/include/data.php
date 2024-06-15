@@ -1,61 +1,10 @@
 <?php
 $projectData = array(
-    '5' => array(
-        'id' => 5,
-        'title' => '쿠캣',
-        'kind' => '이커머스',
-        'summary' => '서비스 플랫폼, Admin 웹개발<br>신규 기능 개발, 사이트 유지/보수, 운영',
-        'stack' => array(
-            array(
-                'tag' => 'bac',
-                'text' => 'PHP'
-            ),
-            array(
-                'tag' => 'bac',
-                'text' => 'CodeIgniter'
-            ),
-            array(
-                'tag' => 'db',
-                'text' => 'mariaDB'
-            ),
-            array(
-                'tag' => 'db',
-                'text' => 'Redis'
-            ),
-            array(
-                'tag' => 'db',
-                'text' => 'elasticSearch'
-            ),
-            array(
-                'tag' => 'fro',
-                'text' => 'javascript'
-            ),
-            array(
-                'tag' => 'fro',
-                'text' => 'jQuery'
-            ),
-            array(
-                'tag' => 'pub',
-                'text' => 'CSS'
-            ),
-            array(
-                'tag' => 'etc',
-                'text' => 'API'
-            ),
-        ),
-        'contentPage'=>true,
-        'link' => 'https://cookatmarket.com',
-        'thumb' => array(
-            'image' => './images/work/work_7/logo-main-white.svg',
-            'imageStyle' => 'width: 70%;',
-            'style' => ' background:#ff5833;'
-        ),
-    ),
     '11' => array(
         'id' => 11,
         'title' => '대항오 계산기',
         'kind' => '개인 프로젝트(진행중)',
-        'summary' => '모바일 게임 [대항해시대 오리진] 편의 기능<br>next.js 학습 토이프로젝트',
+        'summary' => '모바일 게임 [대항해시대 오리진] 편의 기능<br>next.js 학습 목적 토이프로젝트',
         'service' => '
             유저들에게 모바일 게임 [대항해시대 오리진]에 대한 데이터와 편의 기능을 제공하는 사이트 입니다.
             <br>next.js 학습을 위한 토이프로젝트 입니다.
@@ -92,6 +41,101 @@ $projectData = array(
             '유저들의 실질적인 사용 편의성이 개선 되었는지 확인'
         )
     ),
+    '12' => array(
+        'id' => 12,
+        'title' => '영어 시험 기능',
+        'kind' => '개인 스터디',
+        'summary' => '영어 시험 기능 프로토타입 스터디<br>next.js 학습 목적',
+        'service' => '
+            zustand를 사용하여 전역상태 관리 개념과 로컬스토리지
+            <br>학습을 위한 next.js 연습 과제 입니다.
+            사용자의 선택과 상태에 따라<br> 기능 수행을 목표
+        ',
+        'stack' => array(
+            array(
+                'tag' => 'next',
+                'text' => 'Next.js 14'
+            ),
+            array(
+                'tag' => 'next',
+                'text' => 'Zustand'
+            ),
+            array(
+                'tag' => 'fro',
+                'text' => 'typescript'
+            ),
+            array(
+                'tag' => 'pub',
+                'text' => 'Tailwind CSS'
+            ),
+            array(
+                'tag' => 'pub',
+                'text' => 'CSS'
+            ),
+        ),
+        'link' => 'https://ohsssuk.github.io/study-en-test',
+        'thumb' => array(
+            'image' => './images/work/work_12/bg-ent.png',
+        ),
+        'contentPage'=>true,
+        'workImage' => array(
+     
+        ),
+        'workTask' => array(
+            '[객관식 시험]을 테마로 작업하며 학습',
+        )
+    ),
+//    '5' => array(
+//        'id' => 5,
+//        'title' => '쿠캣',
+//        'kind' => '이커머스',
+//        'summary' => '서비스 플랫폼, Admin 웹개발<br>신규 기능 개발, 사이트 유지/보수, 운영',
+//        'stack' => array(
+//            array(
+//                'tag' => 'bac',
+//                'text' => 'PHP'
+//            ),
+//            array(
+//                'tag' => 'bac',
+//                'text' => 'CodeIgniter'
+//            ),
+//            array(
+//                'tag' => 'db',
+//                'text' => 'mariaDB'
+//            ),
+//            array(
+//                'tag' => 'db',
+//                'text' => 'Redis'
+//            ),
+//            array(
+//                'tag' => 'db',
+//                'text' => 'elasticSearch'
+//            ),
+//            array(
+//                'tag' => 'fro',
+//                'text' => 'javascript'
+//            ),
+//            array(
+//                'tag' => 'fro',
+//                'text' => 'jQuery'
+//            ),
+//            array(
+//                'tag' => 'pub',
+//                'text' => 'CSS'
+//            ),
+//            array(
+//                'tag' => 'etc',
+//                'text' => 'API'
+//            ),
+//        ),
+//        'contentPage'=>true,
+//        'link' => 'https://cookatmarket.com',
+//        'thumb' => array(
+//            'image' => './images/work/work_7/logo-main-white.svg',
+//            'imageStyle' => 'width: 70%;',
+//            'style' => ' background:#ff5833;'
+//        ),
+//    ),
     '9' => array(
         'id' => 9,
         'title' => '쿠캣 영상장보기',

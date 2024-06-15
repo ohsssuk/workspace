@@ -16,7 +16,7 @@
             </section>
         </div>
         <section class="part" data-part="project">
-            <h3 class="section_title">프로젝트 <span class="sub"><?=count($projectData) ?></span></h3>
+            <h3 class="section_title">프로젝트 & 스터디 <span class="sub"><?=count($projectData) ?></span></h3>
             <div class="section_content">
                 <ul class="project_list">
                     <?php foreach($projectData as $item) : ?>
